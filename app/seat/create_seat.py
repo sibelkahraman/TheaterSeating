@@ -54,7 +54,7 @@ class CreateSeat:
                 section = 3
                 self.create_seats(section, row)
 
-            return Response(data='Database is created', status=200)
+            return Response(data='Database is created', status=201)
         return Response(data='Database is already created', status=200)
 
     @staticmethod
@@ -76,7 +76,7 @@ class CreateSeat:
             if row == 'A' and section == 2:
                 rank = 1
 
-            if row > 'D' and section == 2:
+            if row > 'C' and section == 2:
                 rank = 3
             if row > 'C' and section == 3:
                 rank = 3
